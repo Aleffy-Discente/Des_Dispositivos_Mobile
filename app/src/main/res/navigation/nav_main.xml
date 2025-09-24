@@ -11,10 +11,10 @@
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/product"
-        android:name="com.example.myapplication.fragments.ProductFragment"
+        android:name="com.example.myapplication.fragments.ProdutoFragment"
         android:label="ProductFragment" />
     <fragment
         android:id="@+id/user"
-        android:name="com.example.myapplication.fragments.UserFragment"
+        android:name="com.example.myapplication.fragments.UsuarioFragment"
         android:label="UserFragment" />
 </navigation>

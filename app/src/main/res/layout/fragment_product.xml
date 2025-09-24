@@ -49,5 +49,13 @@
             android:minHeight="48dp"
             android:text="@string/salvar_produto" />
 
+        <TextView
+            android:id="@+id/tvListaProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+
     </LinearLayout>
 </ScrollView>
