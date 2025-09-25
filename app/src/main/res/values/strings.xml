@@ -15,4 +15,6 @@
     <string name="salvar_produto">Salvar Produto</string>
     <string name="cadastro_user">Cadastro de Usuário</string>
     <string name="cadastro_de_produto">Cadastro de Produto</string>
+    <string name="name">ChatGPT</string>
+    <string name="chatgpt">ChatGPT</string>
 </resources>
