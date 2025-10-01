@@ -1,4 +1,3 @@
-package com.example.at7.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -9,8 +8,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.at7.model.TasksViewModel
 import com.example.at7.UiState
+import com.example.at7.model.TasksViewModel
 
 @Composable
 fun TasksScreen(tasksViewModel: TasksViewModel = viewModel()) {
@@ -20,10 +19,8 @@ fun TasksScreen(tasksViewModel: TasksViewModel = viewModel()) {
         is UiState.Loading -> {
             LoadingComponent()
         }
-        is UiState.Success<*> -> {
-            // Garantindo que seja uma lista de String
-            val tasks = state.data as? List<String> ?: emptyList()
-            TasksListComponent(tasks = tasks) {
+        is UiState.Success -> {
+            TasksListComponent(tasks = state.data) {
                 tasksViewModel.refreshTasks()
             }
         }
@@ -37,10 +34,7 @@ fun TasksScreen(tasksViewModel: TasksViewModel = viewModel()) {
 
 @Composable
 fun LoadingComponent() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         CircularProgressIndicator()
     }
 }
